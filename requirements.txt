@@ -1,0 +1,4 @@
+matplotlib==3.4.3
+numpy==1.21.2
+Pillow==8.4.0
+seaborn==0.12.2
