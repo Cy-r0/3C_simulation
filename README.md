@@ -44,13 +44,25 @@ The simulation is done on a single cell, while real Hi-C measures overlapping
 regions in a population of cells to account for stochastic variations.
 
 
-## Installation and setup
+## Installation and setup (Linux)
 
-git clone this repository on your machine, then create a python environment and
-install dependencies as below
+git clone this repository on your machine
+```
+git clone git@github.com:Cy-r0/3C_simulation
+cd 3C_simulation
+```
+
+Create and activate a python environment
+```
+python3 -m venv 3C_env
+source 3C_env/bin/activate
+```
+
+Install python dependencies
 ```
 python3 -m pip install -r requirements.txt
 ```
+
 To run the simulation from a terminal, navigate to this directory and then:
 ```
 ./simulate.py
