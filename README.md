@@ -22,13 +22,14 @@ chromatin fragments: fragments that were crosslinked and ligated, and isolated
 fragments.
 
 The final output of the simulation is a red and white matrix that shows whether
-any two fragments in the filament were overlapping (and thus crosslinked and ligated) or not.
+any two fragments in the filament were overlapping (and thus crosslinked and
+ligated) or not.
 
 
 ## Limitations
 
-For simplicity, there is only one euchromatin filament, represented as a string.
-No representation of base pairs and other features of DNA are present.
+For simplicity, there is only one euchromatin filament. No representation of
+base pairs and other features of DNA are present.
 
 The shape and arrangement of the filament is mostly random, which is not the
 case in real cells.
