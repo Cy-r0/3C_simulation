@@ -52,7 +52,7 @@ git clone git@github.com:Cy-r0/3C_simulation
 cd 3C_simulation
 ```
 
-Create and activate a python environment
+Create and activate a virtual environment
 ```
 python3 -m venv 3C_env
 source 3C_env/bin/activate
@@ -63,7 +63,7 @@ Install python dependencies
 python3 -m pip install -r requirements.txt
 ```
 
-To run the simulation from a terminal, navigate to this directory and then:
+To run the simulation from a terminal:
 ```
 ./simulate.py
 ```
