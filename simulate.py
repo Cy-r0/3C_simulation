@@ -80,13 +80,13 @@ class Simulator():
 
         return filament * (img_size - 2 * padding) + padding
 
-    def visualise_filament(self, img_size, padding, highlight_intersections=False):
+    def visualise_filament(self, img_size=1000, padding=50, highlight_intersections=False):
         filament = self._scale_filament(self.filament, img_size, padding)
         img = Image.new('RGB', (img_size, img_size), '#303030')
         overlay = Image.new('RGBA', img.size, '#00000000')
         draw = ImageDraw.Draw(img)
         draw_overlay = ImageDraw.Draw(overlay)
-        color_start = (255, 255, 0)
+        color_start = (255, 128, 0)
         color_end = (255, 0, 0)
         for i in range(len(filament)):
             x = filament[i, 0]
@@ -122,12 +122,12 @@ class Simulator():
 
 
 if __name__ == '__main__':
-    # Good filaments:
+    # Good 10k long filaments:
     # seed 2, variance 0.2 - two nests separated by single strand
     # seed 9, variance 0.1 - a few short range interactions, but not much else
     # seed 4, variance 0.3 - one medium range interaction
     # seed 10, variance 0.3 - long range interaction
-    np.random.seed(2)
-    sim = Simulator(length=10000, angle_variance=0.2)
-    sim.visualise_filament(1000, 50, highlight_intersections=True)
-    sim.simulate_3C(segment_l=200)
+    np.random.seed(10)
+    sim = Simulator(length=10000, angle_variance=0.3)
+    sim.visualise_filament(highlight_intersections=True)
+    sim.simulate_3C(segment_l=100)
