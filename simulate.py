@@ -113,6 +113,7 @@ class Simulator():
                     # calculate index of segment the overlap falls in
                     segment_j = j // segment_l
                     matrix[segment_i, segment_j] = 1
+        # NOTE we set diagonal to 2 but the value itself is meaningless
         np.fill_diagonal(matrix, 2)
         self.contact_matrix = matrix
         matrix_plot = sn.heatmap(self.contact_matrix, cmap=sn.cm.rocket_r)
@@ -130,4 +131,4 @@ if __name__ == '__main__':
     np.random.seed(10)
     sim = Simulator(length=10000, angle_variance=0.3)
     sim.visualise_filament(highlight_intersections=True)
-    sim.simulate_3C(segment_l=100)
+    sim.simulate_3C(segment_l=640)
